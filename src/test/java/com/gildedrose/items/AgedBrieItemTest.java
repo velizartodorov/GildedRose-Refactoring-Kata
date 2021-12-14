@@ -36,7 +36,7 @@ class AgedBrieItemTest {
 
   @Test
   @Order(4)
-  void QualityAboveLimitFail() {
+  void qualityAboveLimitFail() {
     testItemQualityAboveLimitException(itemAboveLimitQuality);
   }
 
