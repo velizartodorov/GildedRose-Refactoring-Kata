@@ -1,3 +1,5 @@
+[TOC]
+
 # Gilded Rose Kata in Java
 
 Forked Java version of the Gilded-Rose-Refactoring-Kate project, original can be found
@@ -44,6 +46,7 @@ as such its Quality is 80 and it never alters.
 
 * `Test` must not break the original contract
 * `GildedRose` class must not break the original contract
+
 ## Item rules
 
 * Quality increases or decreases when sell-in days pass or is constant.
@@ -60,3 +63,14 @@ as such its Quality is 80 and it never alters.
 | Conjured | <b>Quality decreases by 2;</b> <br> <b>Quality decreases by 4</b> when sell-in date approaches | - |
 | Backstage Pass | <b>Quality increases by 1;</b><br> <b>Quality increases by 2</b> when there are 10 days or less;<br> <b>Quality increases by 3 </b> when there are 5 days or less;<br> <b>Quality drops to 0</b> after the concert. | - |
 | Sulfura | **Always 80**. Never changes| Legendary item. Constant quality value. |
+
+# Release notes
+
+## v 1.0
+
+- designed it with anemic models
+
+## v 2.0
+
+- fixed bug in quality changes
+- designed it using rich models
