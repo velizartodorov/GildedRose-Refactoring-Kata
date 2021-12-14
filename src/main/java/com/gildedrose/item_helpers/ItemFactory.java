@@ -12,7 +12,7 @@ import java.util.Map;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Stream.of;
 
-public class ItemFactory {
+public final class ItemFactory {
 
   private ItemFactory() {
   }
