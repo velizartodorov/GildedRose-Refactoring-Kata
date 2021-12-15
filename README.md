@@ -1,4 +1,14 @@
-[TOC]
+# Table of contents
+
+- [Gilded Rose Kata in Java](#gilded-rose-kata-in-java)
+- [Requirements](#requirements)
+    * [Gilded Rose Requirements Specification](#gilded-rose-requirements-specification)
+- [Notes](#notes)
+    * [Item rules](#item-rules)
+    * [Types of items](#types-of-items)
+- [Release notes](#release-notes)
+    * [v 1.0](#v-10)
+    * [v 2.0](#v-20)
 
 # Gilded Rose Kata in Java
 
