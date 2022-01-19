@@ -4,20 +4,22 @@ import com.gildedrose.main.Item;
 
 public interface ItemType {
 
-  void updateQuality();
+    void updateQuality();
 
-  void validateQuality();
+    void validateQuality();
 
-  String getName();
+    String getName();
 
-  String QUALITY_ERROR_MESSAGE = "Quality cannot be negative! Current value: ";
-  String OUT_OF_BOUND_QUALITY_MESSAGE = "Quality cannot be above 50! Current value: ";
+    int QUALITY_LIMIT = 50;
 
-  static boolean qualityIsNegative(Item item) {
-    return item.quality < 0;
-  }
+    String QUALITY_ERROR_MESSAGE = "Quality cannot be negative! Current value: ";
+    String OUT_OF_BOUND_QUALITY_MESSAGE = "Quality cannot be above " + QUALITY_LIMIT + "! Current value: ";
 
-  static boolean qualityIsAbove50(Item item) {
-    return item.quality > 50;
-  }
+    static boolean qualityIsNegative(Item item) {
+        return item.quality < 0;
+    }
+
+    static boolean qualityIsAboveLimit(Item item) {
+        return item.quality > QUALITY_LIMIT;
+    }
 }

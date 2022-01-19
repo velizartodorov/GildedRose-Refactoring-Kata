@@ -3,7 +3,7 @@ package com.gildedrose.items;
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
 
-import static com.gildedrose.item_helpers.ItemType.qualityIsAbove50;
+import static com.gildedrose.item_helpers.ItemType.qualityIsAboveLimit;
 import static com.gildedrose.item_helpers.ItemType.qualityIsNegative;
 import static java.lang.Math.min;
 
@@ -31,7 +31,7 @@ public class AgedBrieItem implements ItemType {
   public void validateQuality() {
     if (qualityIsNegative(item)) {
       throw new IllegalArgumentException(QUALITY_ERROR_MESSAGE + item.quality);
-    } else if (qualityIsAbove50(item)) {
+    } else if (qualityIsAboveLimit(item)) {
       throw new IllegalArgumentException(OUT_OF_BOUND_QUALITY_MESSAGE + item.quality);
     }
   }
@@ -42,11 +42,11 @@ public class AgedBrieItem implements ItemType {
   }
 
   public void incrementQuality() {
-    item.quality = min(item.quality + 1, 50);
+    item.quality = min(item.quality + 1, QUALITY_LIMIT);
   }
 
   public void incrementQualityBy2() {
-    item.quality = min(item.quality + 2, 50);
+    item.quality = min(item.quality + 2, QUALITY_LIMIT);
   }
 
   public void decrementSellInDate() {

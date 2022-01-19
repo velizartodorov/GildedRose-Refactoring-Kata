@@ -12,13 +12,10 @@ public class TestHelper {
   public static void testItem(Item item, int daysToPass, int expectedSellIn, int expectedQuality) {
     Item[] items = new Item[1];
     items[0] = item;
-    // given
     GildedRose app = new GildedRose(items);
-    // when
     for (int i = 0; i < daysToPass; i++) {
       app.updateQuality();
     }
-    //then
     assertEquals(expectedSellIn, item.sellIn);
     assertEquals(expectedQuality, item.quality);
   }
