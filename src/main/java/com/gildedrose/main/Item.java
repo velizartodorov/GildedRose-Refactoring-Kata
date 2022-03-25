@@ -2,7 +2,7 @@ package com.gildedrose.main;
 
 public class Item {
 
-  public String name;
+  public final String name;
 
   public int sellIn;
 

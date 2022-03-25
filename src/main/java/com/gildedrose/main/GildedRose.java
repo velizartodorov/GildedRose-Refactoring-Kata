@@ -7,7 +7,7 @@ import com.gildedrose.item_helpers.ItemType;
 
 public class GildedRose {
 
-  Item[] items;
+   final Item[] items;
 
   public GildedRose(Item[] items) {
     this.items = items;
