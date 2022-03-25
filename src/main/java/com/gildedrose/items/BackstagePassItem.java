@@ -77,5 +77,4 @@ public class BackstagePassItem implements ItemType {
     item.quality = min(item.quality + 3, QUALITY_LIMIT);
   }
 
-
 }
