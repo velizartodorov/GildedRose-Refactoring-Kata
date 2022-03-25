@@ -23,21 +23,20 @@ public class TestHelper {
   }
 
   public static void testItemException(Item item) {
-    Item[] items = new Item[1];
-    items[0] = item;
-    GildedRose gildedRose = new GildedRose(items);
-    Exception exception = assertThrows(IllegalArgumentException.class, gildedRose::updateQuality);
-    String actualMessage = exception.getMessage();
-    assertTrue(actualMessage.contains(QUALITY_ERROR_MESSAGE));
+    checkItemForExceptionMessage(item, QUALITY_ERROR_MESSAGE);
   }
 
   public static void testItemQualityAboveLimitException(Item item) {
+    checkItemForExceptionMessage(item, OUT_OF_BOUND_QUALITY_MESSAGE);
+  }
+
+  private static void checkItemForExceptionMessage(Item item, String message) {
     Item[] items = new Item[1];
     items[0] = item;
     GildedRose gildedRose = new GildedRose(items);
     Exception exception = assertThrows(IllegalArgumentException.class, gildedRose::updateQuality);
     String actualMessage = exception.getMessage();
-    assertTrue(actualMessage.contains(OUT_OF_BOUND_QUALITY_MESSAGE));
+    assertTrue(actualMessage.contentEquals(message));
   }
 
 }
