@@ -1,11 +1,11 @@
 package com.gildedrose.main;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(OrderAnnotation.class)
 class ItemClassTest {

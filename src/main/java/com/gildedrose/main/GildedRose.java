@@ -1,11 +1,12 @@
 package com.gildedrose.main;
 
-import com.gildedrose.item_helpers.ItemType;
-
 import static com.gildedrose.item_helpers.ItemFactory.getItemType;
 import static java.util.Arrays.stream;
 
+import com.gildedrose.item_helpers.ItemType;
+
 public class GildedRose {
+
   Item[] items;
 
   public GildedRose(Item[] items) {

@@ -1,11 +1,11 @@
 package com.gildedrose.items;
 
-import com.gildedrose.item_helpers.ItemType;
-import com.gildedrose.main.Item;
-
 import static com.gildedrose.item_helpers.ItemType.qualityIsAboveLimit;
 import static com.gildedrose.item_helpers.ItemType.qualityIsNegative;
 import static java.lang.Math.min;
+
+import com.gildedrose.item_helpers.ItemType;
+import com.gildedrose.main.Item;
 
 public class AgedBrieItem implements ItemType {
 

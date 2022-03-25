@@ -1,5 +1,11 @@
 package com.gildedrose.multiple_items;
 
+import static com.gildedrose.items.AgedBrieItem.AGED_BRIE;
+import static com.gildedrose.items.BackstagePassItem.BACKSTAGE_PASS;
+import static com.gildedrose.items.ConjuredItem.CONJURED;
+import static com.gildedrose.items.LegendaryItem.LEGENDARY;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import com.gildedrose.main.GildedRose;
 import com.gildedrose.main.Item;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,12 +13,6 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-
-import static com.gildedrose.items.AgedBrieItem.AGED_BRIE;
-import static com.gildedrose.items.BackstagePassItem.BACKSTAGE_PASS;
-import static com.gildedrose.items.ConjuredItem.CONJURED;
-import static com.gildedrose.items.LegendaryItem.LEGENDARY;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(OrderAnnotation.class)
 class MultipleItemsTest {

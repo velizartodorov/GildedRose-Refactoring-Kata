@@ -1,11 +1,13 @@
 package com.gildedrose.helper;
 
-import com.gildedrose.main.GildedRose;
-import com.gildedrose.main.Item;
-
 import static com.gildedrose.item_helpers.ItemType.OUT_OF_BOUND_QUALITY_MESSAGE;
 import static com.gildedrose.item_helpers.ItemType.QUALITY_ERROR_MESSAGE;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.gildedrose.main.GildedRose;
+import com.gildedrose.main.Item;
 
 public class TestHelper {
 
