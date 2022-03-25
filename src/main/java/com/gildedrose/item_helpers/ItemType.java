@@ -6,8 +6,9 @@ public interface ItemType {
 
   int QUALITY_LIMIT = 50;
   String QUALITY_ERROR_MESSAGE = "Quality cannot be negative! Current value: ";
-  String OUT_OF_BOUND_QUALITY_MESSAGE =
-      "Quality cannot be above " + QUALITY_LIMIT + "! Current value: ";
+  String OUT_OF_BOUND_QUALITY_MESSAGE = "Quality cannot be above "
+      + QUALITY_LIMIT
+      + "! Current value: ";
 
   static boolean qualityIsNegative(Item item) {
     return item.quality < 0;
