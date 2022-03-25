@@ -30,7 +30,7 @@ public class TestHelper {
     checkItemForExceptionMessage(item, OUT_OF_BOUND_QUALITY_MESSAGE);
   }
 
-  private static void checkItemForExceptionMessage(Item item, String message) {
+  public static void checkItemForExceptionMessage(Item item, String message) {
     Item[] items = new Item[1];
     items[0] = item;
     GildedRose gildedRose = new GildedRose(items);

@@ -1,13 +1,11 @@
 package com.gildedrose.items;
 
+import static com.gildedrose.helper.TestHelper.checkItemForExceptionMessage;
 import static com.gildedrose.helper.TestHelper.testItem;
 import static com.gildedrose.items.LegendaryItem.LEGENDARY;
 import static com.gildedrose.items.LegendaryItem.LEGENDARY_ITEM_QUALITY;
 import static com.gildedrose.items.LegendaryItem.NOT_LEGENDARY_ITEM_ERROR_MESSAGE;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.gildedrose.main.GildedRose;
 import com.gildedrose.main.Item;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
@@ -35,10 +33,7 @@ class LegendaryItemTest {
   @Test
   @Order(3)
   void testFakeLegendaryItemExceptionFail() {
-    GildedRose gildedRose = new GildedRose(new Item[]{fakeLegendaryItem});
-    Exception exception = assertThrows(IllegalArgumentException.class, gildedRose::updateQuality);
-    String actualMessage = exception.getMessage();
-    assertTrue(actualMessage.contains(NOT_LEGENDARY_ITEM_ERROR_MESSAGE));
+    checkItemForExceptionMessage(fakeLegendaryItem, NOT_LEGENDARY_ITEM_ERROR_MESSAGE);
   }
 
 }
