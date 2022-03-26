@@ -36,7 +36,7 @@ public class LegendaryItem implements ItemType {
     return LEGENDARY;
   }
 
-  public void decrementSellInDate() {
+  private void decrementSellInDate() {
     item.sellIn--;
   }
 

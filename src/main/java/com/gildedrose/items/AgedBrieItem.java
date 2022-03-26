@@ -41,19 +41,19 @@ public class AgedBrieItem implements ItemType {
     return AGED_BRIE;
   }
 
-  public void incrementQuality() {
+  private void incrementQuality() {
     item.quality = min(item.quality + 1, QUALITY_LIMIT);
   }
 
-  public void incrementQualityBy2() {
+  private void incrementQualityBy2() {
     item.quality = min(item.quality + 2, QUALITY_LIMIT);
   }
 
-  public void decrementSellInDate() {
+  private void decrementSellInDate() {
     item.sellIn--;
   }
 
-  public boolean beforeSellInDate() {
+  private boolean beforeSellInDate() {
     return item.sellIn >= 0;
   }
 

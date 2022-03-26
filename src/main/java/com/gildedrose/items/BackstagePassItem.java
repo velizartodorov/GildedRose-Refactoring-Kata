@@ -45,35 +45,35 @@ public class BackstagePassItem implements ItemType {
     return BACKSTAGE_PASS;
   }
 
-  public void decrementSellInDate() {
+  private void decrementSellInDate() {
     item.sellIn--;
   }
 
-  public boolean lessThan5DaysToSellIn() {
+  private boolean lessThan5DaysToSellIn() {
     return item.sellIn >= 0 && item.sellIn <= 5;
   }
 
-  public boolean lessThan10DaysToSellIn() {
+  private boolean lessThan10DaysToSellIn() {
     return item.sellIn >= 5 && item.sellIn <= 10;
   }
 
-  public boolean moreThan10DaysToSellIn() {
+  private boolean moreThan10DaysToSellIn() {
     return item.sellIn >= 10;
   }
 
-  public void makeQualityZero() {
+  private void makeQualityZero() {
     item.quality = 0;
   }
 
-  public void incrementQuality() {
+  private void incrementQuality() {
     item.quality = min(item.quality + 1, QUALITY_LIMIT);
   }
 
-  public void incrementQualityBy2() {
+  private void incrementQualityBy2() {
     item.quality = min(item.quality + 2, QUALITY_LIMIT);
   }
 
-  public void incrementQualityBy3() {
+  private void incrementQualityBy3() {
     item.quality = min(item.quality + 3, QUALITY_LIMIT);
   }
 

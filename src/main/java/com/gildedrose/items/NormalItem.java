@@ -40,19 +40,19 @@ public class NormalItem implements ItemType {
     return NORMAL;
   }
 
-  public void decrementSellInDate() {
+  private void decrementSellInDate() {
     item.sellIn--;
   }
 
-  public boolean beforeSellInDate() {
+  private boolean beforeSellInDate() {
     return item.sellIn >= 0;
   }
 
-  public void decrementQuality() {
+  private void decrementQuality() {
     item.quality = max(item.quality - 1, 0);
   }
 
-  public void decrementQualityBy2() {
+  private void decrementQualityBy2() {
     item.quality = max(item.quality - 2, 0);
   }
 
