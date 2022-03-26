@@ -11,7 +11,12 @@ import com.gildedrose.main.Item;
 
 public class TestHelper {
 
-  public static void testItem(Item item, int daysToPass, int expectedSellIn, int expectedQuality) {
+  public static void testItem
+      (Item item,
+          int daysToPass,
+          int expectedSellIn,
+          int expectedQuality
+      ) {
     Item[] items = new Item[1];
     items[0] = item;
     GildedRose app = new GildedRose(items);
