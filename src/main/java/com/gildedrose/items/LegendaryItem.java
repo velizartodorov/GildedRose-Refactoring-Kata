@@ -15,10 +15,6 @@ public class LegendaryItem implements ItemType {
     this.item = item;
   }
 
-  public static boolean qualityIsNotLegendary(Item item) {
-    return item.quality != LEGENDARY_ITEM_QUALITY;
-  }
-
   @Override
   public void updateQuality() {
     decrementSellInDate();
@@ -29,6 +25,10 @@ public class LegendaryItem implements ItemType {
     if (qualityIsNotLegendary(item)) {
       throw new IllegalArgumentException(NOT_LEGENDARY_ITEM_ERROR_MESSAGE + item.quality);
     }
+  }
+
+  private static boolean qualityIsNotLegendary(Item item) {
+    return item.quality != LEGENDARY_ITEM_QUALITY;
   }
 
   @Override
