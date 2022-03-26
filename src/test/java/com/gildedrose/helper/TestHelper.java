@@ -36,7 +36,7 @@ public class TestHelper {
     GildedRose gildedRose = new GildedRose(items);
     Exception exception = assertThrows(IllegalArgumentException.class, gildedRose::updateQuality);
     String actualMessage = exception.getMessage();
-    assertTrue(actualMessage.contentEquals(message));
+    assertTrue(actualMessage.contains(message));
   }
 
 }
