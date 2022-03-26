@@ -80,11 +80,11 @@ a legendary item and as such its Quality is 80 and it never alters.
 
 # Release notes
 
-## v 1.0
-
-- designed it with anemic models
-
-## v 2.0
+## After v. 1.0
 
 - fixed bug in quality changes
 - designed it using rich models
+
+## v 1.0
+
+- designed it with anemic models
