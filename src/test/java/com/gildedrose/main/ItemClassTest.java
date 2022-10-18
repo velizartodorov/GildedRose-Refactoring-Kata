@@ -18,7 +18,7 @@ class ItemClassTest {
     assertEquals("foo", item.name);
     assertEquals(5, item.sellIn);
     assertEquals(20, item.quality);
-    assertEquals("foo, 5, 20", item.toString());
+    assertEquals("Item(name=foo, sellIn=5, quality=20)", item.toString());
   }
 
 }

@@ -1,7 +1,9 @@
 package com.gildedrose.main;
 
 import lombok.AllArgsConstructor;
+import lombok.ToString;
 
+@ToString
 @AllArgsConstructor
 public class Item {
 
@@ -11,8 +13,4 @@ public class Item {
 
   public int quality;
 
-  @Override
-  public String toString() {
-    return this.name + ", " + this.sellIn + ", " + this.quality;
-  }
 }
