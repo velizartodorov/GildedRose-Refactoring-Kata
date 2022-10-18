@@ -4,14 +4,12 @@ import static com.gildedrose.item_helpers.ItemFactory.getItemType;
 import static java.util.Arrays.stream;
 
 import com.gildedrose.item_helpers.ItemType;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class GildedRose {
 
-  final Item[] items;
-
-  public GildedRose(Item[] items) {
-    this.items = items;
-  }
+  public final Item[] items;
 
   public void updateQuality() {
     stream(items).forEach(item -> {
