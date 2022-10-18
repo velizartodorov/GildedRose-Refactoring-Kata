@@ -8,9 +8,6 @@ import lombok.ToString;
 public class Item {
 
   public final String name;
-
   public int sellIn;
-
   public int quality;
-
 }

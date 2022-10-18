@@ -1,18 +1,20 @@
 package com.gildedrose.items;
 
 import static java.lang.Math.max;
+import static lombok.AccessLevel.NONE;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Value;
 
-@AllArgsConstructor
+@Value
 public class NormalItem implements ItemType {
 
-  private final Item item;
-  @Getter
-  private final String name = "Normal";
+  String name = "Normal";
+
+  @Getter(NONE)
+  Item item;
 
   @Override
   public void updateQuality() {

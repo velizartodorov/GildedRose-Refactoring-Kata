@@ -1,19 +1,20 @@
 package com.gildedrose.items;
 
 import static java.lang.Math.max;
+import static lombok.AccessLevel.NONE;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Value;
 
-@AllArgsConstructor
+@Value
 public class ConjuredItem implements ItemType {
 
-  @Getter
-  public final String name = "Conjured Mana Cake";
+  String name = "Conjured Mana Cake";
 
-  private final Item item;
+  @Getter(NONE)
+  Item item;
 
   @Override
   public void updateQuality() {

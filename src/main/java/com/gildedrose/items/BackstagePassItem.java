@@ -1,19 +1,20 @@
 package com.gildedrose.items;
 
 import static java.lang.Math.min;
+import static lombok.AccessLevel.NONE;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Value;
 
-@AllArgsConstructor
+@Value
 public class BackstagePassItem implements ItemType {
 
-  @Getter
-  private final String name = "Backstage passes to a TAFKAL80ETC concert";
+  String name = "Backstage passes to a TAFKAL80ETC concert";
 
-  private final Item item;
+  @Getter(NONE)
+  Item item;
 
   @Override
   public void updateQuality() {
