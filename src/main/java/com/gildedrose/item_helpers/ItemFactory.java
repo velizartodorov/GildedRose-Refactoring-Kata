@@ -17,17 +17,9 @@ import lombok.NoArgsConstructor;
 public final class ItemFactory {
 
   public static ItemType getItemType(Item item) {
-    ItemType itemType = getItem(item);
-    if (itemType == null) {
-      itemType = new NormalItem(item);
-    }
-    return itemType;
-  }
-
-  private static ItemType getItem(Item item) {
     return getItems(item)
         .collect(toMap(ItemType::getName, itemType -> itemType))
-        .get(item.name);
+        .computeIfAbsent(item.name, (itemType -> new NormalItem(item)));
   }
 
   private static Stream<ItemType> getItems(Item item) {
