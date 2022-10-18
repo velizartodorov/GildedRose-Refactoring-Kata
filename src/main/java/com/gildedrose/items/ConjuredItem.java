@@ -1,21 +1,19 @@
 package com.gildedrose.items;
 
-import static com.gildedrose.item_helpers.ItemType.qualityIsAboveLimit;
-import static com.gildedrose.item_helpers.ItemType.qualityIsNegative;
 import static java.lang.Math.max;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor
 public class ConjuredItem implements ItemType {
 
-  public static final String CONJURED = "Conjured Mana Cake";
+  @Getter
+  public final String name = "Conjured Mana Cake";
 
   private final Item item;
-
-  public ConjuredItem(Item item) {
-    this.item = item;
-  }
 
   @Override
   public void updateQuality() {
@@ -34,11 +32,6 @@ public class ConjuredItem implements ItemType {
     } else if (qualityIsAboveLimit(item)) {
       throw new IllegalArgumentException(OUT_OF_BOUND_QUALITY_MESSAGE + item.quality);
     }
-  }
-
-  @Override
-  public String getName() {
-    return CONJURED;
   }
 
   private void decrementSellInDate() {

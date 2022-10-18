@@ -10,11 +10,11 @@ public interface ItemType {
       + QUALITY_LIMIT
       + "! Current value: ";
 
-  static boolean qualityIsNegative(Item item) {
+  default boolean qualityIsNegative(Item item) {
     return item.quality < 0;
   }
 
-  static boolean qualityIsAboveLimit(Item item) {
+  default boolean qualityIsAboveLimit(Item item) {
     return item.quality > QUALITY_LIMIT;
   }
 

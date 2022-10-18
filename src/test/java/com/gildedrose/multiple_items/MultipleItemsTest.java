@@ -1,9 +1,9 @@
 package com.gildedrose.multiple_items;
 
-import static com.gildedrose.items.AgedBrieItem.AGED_BRIE;
-import static com.gildedrose.items.BackstagePassItem.BACKSTAGE_PASS;
-import static com.gildedrose.items.ConjuredItem.CONJURED;
-import static com.gildedrose.items.LegendaryItem.LEGENDARY;
+import static com.gildedrose.items.AgedBrieItemTest.AGED_BRIE;
+import static com.gildedrose.items.BackstagePassItemTest.BACKSTAGE_PASS;
+import static com.gildedrose.items.ConjuredItemTest.CONJURED;
+import static com.gildedrose.items.LegendaryItemTest.LEGENDARY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.gildedrose.main.GildedRose;
@@ -17,9 +17,12 @@ import org.junit.jupiter.api.TestMethodOrder;
 @TestMethodOrder(OrderAnnotation.class)
 class MultipleItemsTest {
 
-  public static final Item normalItem1 = new Item("+5 Dexterity Vest", 10, 20);
+  public static final String DEXTERITY_VEST = "+5 Dexterity Vest";
+  public static final String ELIXIR_OF_THE_MONGOOSE = "Elixir of the Mongoose";
+
+  public static final Item normalItem1 = new Item(DEXTERITY_VEST, 10, 20);
   public static final Item agedBrieItem = new Item(AGED_BRIE, 2, 0);
-  public static final Item normalItem2 = new Item("Elixir of the Mongoose", 5, 7);
+  public static final Item normalItem2 = new Item(ELIXIR_OF_THE_MONGOOSE, 5, 7);
   public static final Item legendaryItem1 = new Item(LEGENDARY, 0, 80);
   public static final Item legendaryItem2 = new Item(LEGENDARY, -1, 80);
   public static final Item backStagePassItem1 = new Item(BACKSTAGE_PASS, 15, 20);

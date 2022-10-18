@@ -3,7 +3,6 @@ package com.gildedrose.items;
 import static com.gildedrose.helper.TestHelper.testItem;
 import static com.gildedrose.helper.TestHelper.testItemException;
 import static com.gildedrose.helper.TestHelper.testItemQualityAboveLimitException;
-import static com.gildedrose.items.NormalItem.NORMAL;
 
 import com.gildedrose.main.Item;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
@@ -13,6 +12,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(OrderAnnotation.class)
 class NormalItemTest {
+
+  private final static String NORMAL = "Normal";
 
   private final Item item = new Item(NORMAL, 5, 20);
   private final Item itemNegativeQuality = new Item(NORMAL, 10, -5);

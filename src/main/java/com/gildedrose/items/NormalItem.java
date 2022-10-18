@@ -1,20 +1,18 @@
 package com.gildedrose.items;
 
-import static com.gildedrose.item_helpers.ItemType.qualityIsAboveLimit;
-import static com.gildedrose.item_helpers.ItemType.qualityIsNegative;
 import static java.lang.Math.max;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor
 public class NormalItem implements ItemType {
 
-  public static final String NORMAL = "Normal";
   private final Item item;
-
-  public NormalItem(Item item) {
-    this.item = item;
-  }
+  @Getter
+  private final String name = "Normal";
 
   @Override
   public void updateQuality() {
@@ -33,11 +31,6 @@ public class NormalItem implements ItemType {
     } else if (qualityIsAboveLimit(item)) {
       throw new IllegalArgumentException(OUT_OF_BOUND_QUALITY_MESSAGE + item.quality);
     }
-  }
-
-  @Override
-  public String getName() {
-    return NORMAL;
   }
 
   private void decrementSellInDate() {

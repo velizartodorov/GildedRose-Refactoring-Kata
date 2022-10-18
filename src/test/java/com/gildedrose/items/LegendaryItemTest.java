@@ -2,7 +2,6 @@ package com.gildedrose.items;
 
 import static com.gildedrose.helper.TestHelper.checkItemForExceptionMessage;
 import static com.gildedrose.helper.TestHelper.testItem;
-import static com.gildedrose.items.LegendaryItem.LEGENDARY;
 import static com.gildedrose.items.LegendaryItem.LEGENDARY_ITEM_QUALITY;
 import static com.gildedrose.items.LegendaryItem.NOT_LEGENDARY_ITEM_ERROR_MESSAGE;
 
@@ -13,8 +12,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(OrderAnnotation.class)
-class LegendaryItemTest {
+public class LegendaryItemTest {
 
+  public static final String LEGENDARY = "Sulfuras, Hand of Ragnaros";
   private final Item item = new Item(LEGENDARY, 5, 80);
   private final Item fakeLegendaryItem = new Item(LEGENDARY, 5, 75);
 

@@ -1,21 +1,18 @@
 package com.gildedrose.items;
 
-import static com.gildedrose.item_helpers.ItemType.qualityIsAboveLimit;
-import static com.gildedrose.item_helpers.ItemType.qualityIsNegative;
 import static java.lang.Math.min;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor
 public class AgedBrieItem implements ItemType {
 
-  public static final String AGED_BRIE = "Aged Brie";
-
   private final Item item;
-
-  public AgedBrieItem(Item item) {
-    this.item = item;
-  }
+  @Getter
+  private final String name = "Aged Brie";
 
   @Override
   public void updateQuality() {
@@ -34,11 +31,6 @@ public class AgedBrieItem implements ItemType {
     } else if (qualityIsAboveLimit(item)) {
       throw new IllegalArgumentException(OUT_OF_BOUND_QUALITY_MESSAGE + item.quality);
     }
-  }
-
-  @Override
-  public String getName() {
-    return AGED_BRIE;
   }
 
   private void incrementQuality() {

@@ -1,21 +1,19 @@
 package com.gildedrose.items;
 
-import static com.gildedrose.item_helpers.ItemType.qualityIsAboveLimit;
-import static com.gildedrose.item_helpers.ItemType.qualityIsNegative;
 import static java.lang.Math.min;
 
 import com.gildedrose.item_helpers.ItemType;
 import com.gildedrose.main.Item;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor
 public class BackstagePassItem implements ItemType {
 
-  public static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
+  @Getter
+  private final String name = "Backstage passes to a TAFKAL80ETC concert";
 
   private final Item item;
-
-  public BackstagePassItem(Item item) {
-    this.item = item;
-  }
 
   @Override
   public void updateQuality() {
@@ -38,11 +36,6 @@ public class BackstagePassItem implements ItemType {
     } else if (qualityIsAboveLimit(item)) {
       throw new IllegalArgumentException(OUT_OF_BOUND_QUALITY_MESSAGE + item.quality);
     }
-  }
-
-  @Override
-  public String getName() {
-    return BACKSTAGE_PASS;
   }
 
   private void decrementSellInDate() {

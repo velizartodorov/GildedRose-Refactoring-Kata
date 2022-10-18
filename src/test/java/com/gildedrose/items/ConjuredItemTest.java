@@ -3,7 +3,6 @@ package com.gildedrose.items;
 import static com.gildedrose.helper.TestHelper.testItem;
 import static com.gildedrose.helper.TestHelper.testItemException;
 import static com.gildedrose.helper.TestHelper.testItemQualityAboveLimitException;
-import static com.gildedrose.items.ConjuredItem.CONJURED;
 
 import com.gildedrose.main.Item;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
@@ -12,8 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(OrderAnnotation.class)
-class ConjuredItemTest {
+public class ConjuredItemTest {
 
+  public static final String CONJURED = "Conjured Mana Cake";
   private final Item item = new Item(CONJURED, 5, 20);
   private final Item itemError = new Item(CONJURED, 10, -5);
   private final Item itemAboveLimitQuality = new Item(CONJURED, 10, 60);
