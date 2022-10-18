@@ -11,7 +11,7 @@ import com.gildedrose.main.Item;
 
 public class TestHelper {
 
-  public static void testItem
+  public void testItem
       (Item item,
           int daysToPass,
           int expectedSellIn,
@@ -27,15 +27,15 @@ public class TestHelper {
     assertEquals(expectedQuality, item.quality);
   }
 
-  public static void testItemException(Item item) {
+  public void testItemException(Item item) {
     checkItemForExceptionMessage(item, QUALITY_ERROR_MESSAGE);
   }
 
-  public static void testItemQualityAboveLimitException(Item item) {
+  public void testItemQualityAboveLimitException(Item item) {
     checkItemForExceptionMessage(item, OUT_OF_BOUND_QUALITY_MESSAGE);
   }
 
-  public static void checkItemForExceptionMessage(Item item, String message) {
+  public void checkItemForExceptionMessage(Item item, String message) {
     Item[] items = new Item[1];
     items[0] = item;
     GildedRose gildedRose = new GildedRose(items);

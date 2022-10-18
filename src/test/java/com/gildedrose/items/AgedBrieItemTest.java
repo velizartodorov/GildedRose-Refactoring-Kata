@@ -1,9 +1,6 @@
 package com.gildedrose.items;
 
-import static com.gildedrose.helper.TestHelper.testItem;
-import static com.gildedrose.helper.TestHelper.testItemException;
-import static com.gildedrose.helper.TestHelper.testItemQualityAboveLimitException;
-
+import com.gildedrose.helper.TestHelper;
 import com.gildedrose.main.Item;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
@@ -11,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(OrderAnnotation.class)
-public class AgedBrieItemTest {
+public class AgedBrieItemTest extends TestHelper {
 
   public static final String AGED_BRIE = "Aged Brie";
   private final Item item = new Item(AGED_BRIE, 5, 20);
