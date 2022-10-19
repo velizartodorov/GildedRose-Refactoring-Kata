@@ -22,13 +22,13 @@ public class LegendaryItem implements ItemType {
 
   @Override
   public void validateQuality() {
-    if (qualityIsNotLegendary(item)) {
+    if (isNotLegendary(item)) {
       String errorMessage = "Item is legendary, quality must be always 80! Current value: ";
       throw new IllegalArgumentException(errorMessage + item.quality);
     }
   }
 
-  private boolean qualityIsNotLegendary(Item item) {
+  private boolean isNotLegendary(Item item) {
     return item.quality != 80;
   }
 
