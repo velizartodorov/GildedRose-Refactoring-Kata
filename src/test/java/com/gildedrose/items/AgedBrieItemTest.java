@@ -1,19 +1,23 @@
 package com.gildedrose.items;
 
-import com.gildedrose.helper.TestHelper;
+import static lombok.AccessLevel.PRIVATE;
+
 import com.gildedrose.main.Item;
+import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(OrderAnnotation.class)
+@FieldDefaults(makeFinal = true, level = PRIVATE)
 public class AgedBrieItemTest extends TestHelper {
 
-  public static final String AGED_BRIE = "Aged Brie";
-  private final Item item = new Item(AGED_BRIE, 5, 20);
-  private final Item itemError = new Item(AGED_BRIE, 10, -5);
-  private final Item itemAboveLimitQuality = new Item(AGED_BRIE, 10, 60);
+  public final static String AGED_BRIE = "Aged Brie";
+
+  Item item = new Item(AGED_BRIE, 5, 20);
+  Item itemError = new Item(AGED_BRIE, 10, -5);
+  Item itemAboveLimitQuality = new Item(AGED_BRIE, 10, 60);
 
   @Test
   @Order(1)

@@ -1,4 +1,4 @@
-package com.gildedrose.helper;
+package com.gildedrose.items;
 
 import static com.gildedrose.item_helpers.ItemType.OUT_OF_BOUND_QUALITY_MESSAGE;
 import static com.gildedrose.item_helpers.ItemType.QUALITY_ERROR_MESSAGE;
@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.gildedrose.main.GildedRose;
 import com.gildedrose.main.Item;
 
-public class TestHelper {
+class TestHelper {
 
-  public void testItem
+  void testItem
       (Item item,
           int daysToPass,
           int expectedSellIn,
@@ -27,15 +27,15 @@ public class TestHelper {
     assertEquals(expectedQuality, item.quality);
   }
 
-  public void testItemException(Item item) {
+  void testItemException(Item item) {
     checkItemForExceptionMessage(item, QUALITY_ERROR_MESSAGE);
   }
 
-  public void testItemQualityAboveLimitException(Item item) {
+  void testItemQualityAboveLimitException(Item item) {
     checkItemForExceptionMessage(item, OUT_OF_BOUND_QUALITY_MESSAGE);
   }
 
-  public void checkItemForExceptionMessage(Item item, String message) {
+  void checkItemForExceptionMessage(Item item, String message) {
     Item[] items = new Item[1];
     items[0] = item;
     GildedRose gildedRose = new GildedRose(items);
