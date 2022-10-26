@@ -4,12 +4,9 @@ import static lombok.AccessLevel.PRIVATE;
 
 import com.gildedrose.main.Item;
 import lombok.experimental.FieldDefaults;
-import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 
-@TestMethodOrder(OrderAnnotation.class)
 @FieldDefaults(makeFinal = true, level = PRIVATE)
 public class LegendaryItemTest extends TestHelper {
 

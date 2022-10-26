@@ -8,20 +8,18 @@ import static lombok.AccessLevel.PRIVATE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
+import com.gildedrose.items.TestHelper;
 import com.gildedrose.main.GildedRose;
 import com.gildedrose.main.Item;
 import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestMethodOrder;
 
-@TestMethodOrder(OrderAnnotation.class)
 @FieldDefaults(makeFinal = true, level = PRIVATE)
 @TestInstance(PER_CLASS)
-class MultipleItemsTest {
+class MultipleItemsTest extends TestHelper {
 
   String DEXTERITY_VEST = "+5 Dexterity Vest";
   String ELIXIR_OF_THE_MONGOOSE = "Elixir of the Mongoose";

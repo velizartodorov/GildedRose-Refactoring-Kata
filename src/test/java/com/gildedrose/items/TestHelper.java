@@ -8,8 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.gildedrose.main.GildedRose;
 import com.gildedrose.main.Item;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.TestMethodOrder;
 
-class TestHelper {
+@TestMethodOrder(OrderAnnotation.class)
+public class TestHelper {
 
   void testItem
       (Item item,
