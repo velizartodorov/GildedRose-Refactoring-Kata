@@ -56,15 +56,15 @@ a legendary item and as such its Quality is 80 and it never alters.
 
 ## Types of items
 
-| Item name                         | Quality changes, when day passes                                                                                                                                                                                    | Description                             |
-|:----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------|
-| Normal                            | **Quality decreases by 1;** <br> **Quality decreases by                                                                                                                                                             |                                         |
-| 2**, when sell-in date approaches | -                                                                                                                                                                                                                   |                                         |
-| Aged Brie                         | **Quality increases by 1;** <br> **Quality increases by                                                                                                                                                             |                                         |
-| 2**, when sell-in date approaches | -                                                                                                                                                                                                                   |                                         |
-| Conjured                          | <b>Quality decreases by 2;</b> <br> <b>Quality decreases by 4</b> when sell-in date approaches                                                                                                                      | -                                       |
-| Backstage Pass                    | <b>Quality increases by 1;</b><br> <b>Quality increases by 2</b> when there are 10 days or less;<br> <b>Quality increases by 3 </b> when there are 5 days or less;<br> <b>Quality drops to 0</b> after the concert. | -                                       |
-| Sulfura                           | **Always 80**. Never changes                                                                                                                                                                                        | Legendary item. Constant quality value. |
+| **Item Type**           | **Description**                                                                    | **Behavior**                                                                                                                                                |
+|-------------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **General Items**       | All standard items sold at the inn.                                                | - Quality and SellIn decrease by 1 daily.<br> - After the sell-by date, Quality degrades twice as fast.<br> - Quality cannot be negative.                   |
+| **Aged Brie**           | A special cheese that becomes more valuable over time.                             | - Quality increases as it ages.<br> - Quality cannot exceed 50.                                                                                             |
+| **Sulfuras**            | A legendary item with immutable properties.                                        | - Quality is fixed at 80.<br> - Does not need to be sold.<br> - Does not degrade in Quality.                                                                |
+| **Backstage Passes**    | Tickets that gain value as the concert date approaches but become worthless after. | - Quality increases as SellIn approaches:<br>   - +2 when 10 days or less.<br>   - +3 when 5 days or less.<br> - Quality drops to 0 after the concert date. |
+| **Conjured Items**      | Recently introduced items that degrade faster than normal items.                   | - Quality degrades twice as fast as normal items.<br> - Quality cannot be negative.                                                                         |
+
+
 
 # Release notes
 
